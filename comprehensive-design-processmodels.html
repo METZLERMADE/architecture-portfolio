@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .solid-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .tabs {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .tabs li {
+            margin: 0 10px;
+        }
+        .tabs li a {
+            color: white;
+            text-decoration: none;
+        }
+        .title {
+            text-align: center;
+            font-size: 2em;
+            padding-top: 60px; /* Adjusted for fixed header */
+            font-weight: bold;
+            color: #121212;
+            margin-bottom: 30px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .solid-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #121212;
+            text-align: left;
+            position: relative;
+            padding-left: 10px;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1.5em;
+            background-color: rgba(0, 0, 0, 0.1); /* Faded banner */
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+        .subsection-title {
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #610a0a;
+            text-align: left;
+            padding-left: 30px; /* Indent the subsection titles */
+            position: relative;
+        }
+        .subsection-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1.5em;
+            background-color: rgba(150, 12, 21, 0.1); /* Faded banner with color from physical model file */
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            justify-items: center;
+            margin-top: 30px;
+            margin-bottom: 50px; /* Add space below the images */
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Tab -->
+    <header class="solid-header">
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comprehensive-design.html">Comprehensive Design Studio, Fall 2024</a></li>
+                <li><a href="design-4.html">Design Studio IIII (Spring '24)</a></li>
+                <li><a href="comprehensive-design.html#bottom">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title Section -->
+    <section class="title">
+        <p>Process Models</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <!-- 32nd Scale Progression -->
+        <div class="section-title">32nd Scale Progression</div>
+        <div class="image-gallery">
+            <img src="images/processmodels/32NDITERATION1.png" alt="32nd Scale Image 1">
+            <img src="images/processmodels/32NDITERATION2.png" alt="32nd Scale Image 2">
+            <img src="images/processmodels/32NDITERATION3.png" alt="32nd Scale Image 3">
+            <img src="images/processmodels/32NDITERATION4.png" alt="32nd Scale Image 4">
+        </div>
+
+        <!-- 16th Scale Midterm Model -->
+        <div class="section-title">16th Scale Midterm Model</div>
+        <div class="image-gallery">
+            <img src="images/processmodels/MIDTERMINSITE1.jpeg" alt="16th Scale Image 1">
+            <img src="images/processmodels/MIDTERMINSITE2.jpeg" alt="16th Scale Image 2">
+            <img src="images/processmodels/MIDTERMINSITE3.jpeg" alt="16th Scale Image 3">
+        </div>
+
+        <!-- 1/8th Midterm Structure Reading Room Model -->
+        <div class="section-title">1/8th Midterm Structure Reading Room Model</div>
+        <div class="image-gallery">
+            <img src="images/processmodels/MIDTERMSTRUCTURE1.jpeg" alt="1/8th Scale Image 1">
+            <img src="images/processmodels/MIDTERMSTRUCTURE2.jpeg" alt="1/8th Scale Image 2">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="solid-footer">
+        <p>&copy; 2025 Madeline Metzler. All rights reserved.</p>
+    </footer>
+</body>
+</html>

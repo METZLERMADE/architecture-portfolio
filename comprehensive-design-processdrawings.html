@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Drawings/Sketches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .solid-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .tabs {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .tabs li {
+            margin: 0 10px;
+        }
+        .tabs li a {
+            color: white;
+            text-decoration: none;
+        }
+        .title {
+            text-align: center;
+            font-size: 2em;
+            padding-top: 60px; /* Adjusted for fixed header */
+            font-weight: bold;
+            color: #121212;
+            margin-bottom: 30px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .solid-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #121212;
+            text-align: left;
+            position: relative;
+            padding-left: 10px;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1.5em;
+            background-color: rgba(0, 0, 0, 0.116); /* Faded banner */
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+        .subsection-title {
+            font-size: 1.2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #000000;
+            text-align: center; /* Center the text */
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 10px;
+        }
+        .subsection-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 575px;
+            width: 20%;
+            height: 2px;
+            background-color: #960c15; /* Underline color from physical model file */
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            justify-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px; /* Add space below the images */
+        }
+        .image-gallery img {
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.279);
+        }
+        .gap-before {
+            margin-top: 200px; /* Add gap before the title */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Tab -->
+    <header class="solid-header">
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comprehensive-design.html">Comprehensive Design Studio, Fall 2024</a></li>
+                <li><a href="design-4.html">Design Studio IIII (Spring '24)</a></li>
+                <li><a href="comprehensive-design.html#bottom">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title Section -->
+    <section class="title">
+        <p>Process Drawings/Sketches</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <!-- Hand Drawing Process -->
+        <div class="section-title">Hand Drawing Process</div>
+        <div class="subsection-title">Set 1</div>
+        <div class="image-gallery">
+            <img src="images/drawings/1B.jpg" alt="Hand Drawing 1">
+            <img src="images/drawings/1C.jpg" alt="Hand Drawing 2">
+            <img src="images/drawings/1D.jpg" alt="Hand Drawing 3">
+            <img src="images/drawings/1A.jpg" alt="Hand Drawing 4">
+        </div>
+        <div class="subsection-title">Set 2</div>
+        <div class="image-gallery">
+            <img src="images/drawings/2B.jpg" alt="Hand Drawing 5">
+            <img src="images/drawings/2C.jpg" alt="Hand Drawing 6">
+            <img src="images/drawings/2D.jpg" alt="Hand Drawing 7">
+            <img src="images/drawings/2A.jpg" alt="Hand Drawing 8">
+        </div>
+
+        <!-- Sketch Development -->
+        <div class="section-title gap-before">Sketch Development</div>
+
+        <!-- Schematic Development -->
+        <div class="subsection-title">Schematic Development</div>
+        <div class="image-gallery">
+            <img src="images/drawings/skematicdevelopment1.jpg" alt="Schematic Development 1">
+            <img src="images/drawings/skematicdevelopment2.jpg" alt="Schematic Development 2">
+        </div>
+
+        <!-- Structural Details -->
+        <div class="subsection-title">Structural Details</div>
+        <div class="image-gallery">
+            <img src="images/drawings/structuredevelopment1.jpg" alt="Structural Details 1">
+            <img src="images/drawings/structuredevelopment2.jpg" alt="Structural Details 2">
+            <img src="images/drawings/structuredevelopment3.jpg" alt="Structural Details 3">
+        </div>
+
+        <!-- Perspective Development -->
+        <div class="subsection-title">Perspective Development</div>
+        <div class="image-gallery">
+            <img src="images/drawings/perspectivedevelopment1.jpg" alt="Perspective Development 1">
+            <img src="images/drawings/perspectivvedevelopment2.jpg" alt="Perspective Development 2">
+        </div>
+
+        <!-- Detail Development -->
+        <div class="subsection-title">Detail Development</div>
+        <div class="image-gallery">
+            <img src="images/drawings/detaildevelopmet1.jpg" alt="Detail Development 1">
+            <img src="images/drawings/detaildevelopmet2.jpg" alt="Detail Development 2">
+            <img src="images/drawings/detaildevelopmet3.jpg" alt="Detail Development 3">
+            <img src="images/drawings/detaildevelopmet4.jpg" alt="Detail Development 4">
+            <img src="images/drawings/detaildevelopmet5.jpg" alt="Detail Development 5">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="solid-footer">
+        <p>&copy; 2025 Madeline Metzler. All rights reserved.</p>
+    </footer>
+</body>
+</html>

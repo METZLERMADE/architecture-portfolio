@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Studio IIII | Portfolio</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #121212;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            padding-left: 0px;
+        }
+
+        /* Background Images */
+        .background-container {
+            position: absolute;
+            margin-top: 40px;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            z-index: -1;
+        }
+
+        .background-container img {
+            width: 100%;
+        height: auto;
+        border: 2px solid black; /* Add this line */
+        }
+
+        .additional-images {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            width: 34%;
+            max-width: 80%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .additional-images img {
+        border: 2px solid black; /* Add this line */
+    }
+
+        .newrow {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            width: 50%;
+            max-width: 80%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%); 
+        }
+
+        /* New Row with Right-Aligned Image and Text Box */
+        .newrow-with-text {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .newrow-with-text img {
+            max-width: 40%;
+            height: auto;
+        }
+
+        .text-box {
+            position: absolute;
+            right: 600px; /* Adjust this value to position the text box on the right side */
+            top: 100px; /* Adjust for vertical positioning */
+            width: 600px;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 15px;
+            font-size: 1em;
+            border-radius: 10px;
+        }
+
+        /* Vertical Navigation */
+        nav {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            padding: 14px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .solid-header .tabs a:hover,
+        .solid-header .tabs a.active {
+            color: #ff6600;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Title Section */
+        .title {
+            text-align: center;
+            font-size: 2em;
+            padding-top: 20px;
+            font-weight: bold;
+        }
+        .red-button {
+            background-color: rgba(114, 11, 11, 0.74);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .red-button:hover {
+            background-color: darkred;
+        }
+        /* Footer */
+        .solid-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="background-container">
+        <img src="Screenshot (89).png" alt="Concept Diagram">
+        <div class="additional-images">
+            <img src="images/adaptive-reuse.jpg" alt="Adaptive Reuse">
+            <img src="images/sitecontext.jpg" alt="Site context">
+            <img src="images/siteplan.jpg" alt="Site Plan">
+        </div>
+        <!-- Duplicate Row -->
+        <div class="additional-images">
+            <img src="images/level1.jpg" alt="lvl1">
+            <img src="images/level2.jpg" alt="lvl2">
+            <img src="images/level3.jpg" alt="lvl3">
+        </div>
+        <!-- New Row with Two Images -->
+        <div class="newrow">
+            <img src="images/section.jpg" alt="lon section">
+            <img src="images/section1.jpg" alt="short section">
+        </div>
+        <!-- New Row with Two Images2 -->
+        <div class="newrow">
+            <img src="images/night3.jpg" alt="night rendering">
+            <img src="images/material.jpg" alt="material section">
+        </div>
+        <!-- New Row with Two Images3 -->
+        <div class="newrow">
+            <img src="images/theater3.jpg" alt="theater rendering">
+            <img src="images/ampitheater.jpg" alt="amphitheater rendering">
+        </div>
+        <!-- New Image Row with Right-Aligned Text Box -->
+        <div class="newrow-with-text">
+            <img src="images/forum.jpg" alt="new right-aligned image">
+            <div class="text-box">
+                <p>Theater- The theater spaces were the central programmatic anchors that guided the overall design of the community center. After designating a significant portion of the square footage to preserving the footprint of the existing historic building, a strategic decision was made to stack and split the two required theater spaces - one indoor theater suspended above an outdoor amphitheater. Providing flexible exibition space that could accommodate a variety of events was a key priority for serving the diverse needs of the surrounding communities.
+
+Connecting space
+
+A consistent challenge was seamlessly and respectfully integrating the existing structure into the new construction. The design had to strike a careful balance between preserving the historic character of the site while introducing contemporary elements to meet the community’s needs.
+
+The design features a deep multipurpose space topped with expansive bridges, aiding an effortless flow between spaces. The composition of all materials facing each other in this “forum” space visually connects the old and new structures in a functional way. The use of complementary materials and textures helps blur the lines between old and new, creating a cohesive whole. The bridges not only facilitate circulation but also frame views of the existing structure, celebrating its presence within the new design. This central gathering space acts as the confluence where the past meets the present, inviting users to appreciate the site’s rich history while enjoying modern amenitiese.</p>
+            </div>
+        </div>
+        <!-- New Row with Two Images4 -->
+        <div class="newrow">
+            <img src="images/physical2.jpg" alt="model">
+            <img src="images/physicalmodel.jpg" alt="model">
+        </div>
+    </section>
+    <section class="button-section" style="text-align: center; gap: 300px; margin-top: 100px; margin-bottom: 100px;">
+        <button onclick="window.location.href='spring2024portfolio.METZLER.MADELINE.pdf'" class="red-button">View Portfolio</button>
+        <button onclick="window.location.href='2025Resume.Metzler.Madeline.pdf'" class="red-button" style="margin-left: 10px;">View Resume</button>
+    </section>
+    </div>
+    
+
+    <!-- Navigation -->
+    <header class="solid-header">
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="comprehensive-design.html">Comprehensive Design Studio (Fall '24)</a></li>
+                <li><a href="design-4.html">Design Studio IIII (Spring '24)</a></li>
+                <li><a href="physical-model-gallery.html">Physical Model Gallery</a></li>
+                <li><a href="naab-docs.html">NAAB Documentation</a></li>
+                <li><a href="bps-project.html">BPS Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title Section -->
+    <section class="title">
+        <p>Design Studio IIII, Spring 2024</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="solid-footer">
+        <p>&copy; 2025 Madeline Metzler. All rights reserved.</p>
+    </footer>
+</body>
+</html>

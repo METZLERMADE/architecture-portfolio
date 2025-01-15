@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comprehensive Design Studio, Fall 2024</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #121212;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            padding-top: 60px; /* Adjusted for fixed header */
+        }
+        .text-container {
+            width: 35%; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the text container */
+            transform: translateX(-20px); /* Move the text container 20px to the left */
+        }
+        .text-container1 {
+            width: 25%; /* Adjust the width as needed */
+            margin: 50px auto; /* Center the text container and move it down by 50px */
+        }
+
+        .images-leftaligned {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the text vertically relative to the image */
+        }
+
+       /* Solid Header - Horizontal Navigation */
+       .solid-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .tabs {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabs li {
+            margin: 0 10px;
+        }
+
+        .tabs li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .tabs li a:hover {
+            text-decoration: underline;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2em;
+            padding-top: 60px; /* Adjusted for fixed header */
+            font-weight: bold;
+            color: #121212;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        .title {
+            text-align: center;
+            font-size: 2em;
+            padding-top: 20px;
+            font-weight: bold;
+            color: #121212;
+            margin-bottom: 30px;
+        }
+
+        /* Images Section */
+        .images-container-autoh {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 0 auto 40px; /* Add space below */
+            width: 100%; /* Prevent overlap with tabs */
+        }
+
+        .images-container-autoh img {
+            max-width: auto;
+            max-height: 350px;
+            width: auto;
+            height: 100%;
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .images-container-autow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 0 auto 40px; /* Add space below */
+            width: 100%; /* Prevent overlap with tabs */
+        }
+
+        .images-container-autow img {
+            max-width: auto;
+            max-height: 400px;
+            width: auto;
+            height: 90%;
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                }
+        .images-container-autow75 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 0 auto 40px; /* Add space below */
+            width: 100%; /* Prevent overlap with tabs */
+        }
+
+        .images-container-autow75 img {
+            max-width: auto;
+            max-height: 250px;
+            width: auto;
+            height: 100%;
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .images-leftaligned {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            gap: 30px;
+            margin: 40px 0; /* Add space above and below */
+            margin-left: 100px; /* Start 180px from the left */
+        }
+
+        .images-leftaligned img {
+            max-width: 750px; /* Set a maximum width for the image */
+            width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .images-leftaligned-wallsect {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            gap: 30px;
+            margin: 40px 0; /* Add space above and below */
+            margin-left: 100px; /* Start 180px from the left */
+        }
+
+        .images-leftaligned-wallsect img {
+            max-width: 900px; /* Set a maximum width for the image */
+            width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .images-leftaligned-compsect {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            gap: 30px;
+            margin: 40px 0; /* Add space above and below */
+            margin-left: 100px; /* Start 180px from the left */
+        }
+
+        .images-leftaligned-compsect img {
+            max-width: 1100px; /* Set a maximum width for the image */
+            width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }    
+         /* Images Section */
+         .images-container-longsection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 0 auto 40px; /* Add space below */
+            width: 100%; /* Prevent overlap with tabs */
+        }
+
+        .images-container-longsection img {
+            max-width: auto;
+            max-height: 450px;
+            width: auto;
+            height: 100%;
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                }
+
+        /* Footer */
+        .solid-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .button-section {
+            display: flex;
+            justify-content: center; /* Center the buttons */
+            gap: 150px; /* Space the buttons 250px from each other */
+            margin-top: 100px; /* Add space above the buttons */
+            margin-bottom: 50px; /* Add space below the buttons */
+            text-align: center; /* Center the text */
+        }
+
+        .button {
+            position: relative;
+            display: inline-block;
+        }
+
+        .button img {
+            width: 300px; /* Set a width for the thumbnail images */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #121212;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.7); /* Add a background to make text readable */
+            padding: 5px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Solid Header -->
+    <header class="solid-header">
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html" class="active">Home</a></li> <!-- Changed to Home -->
+                <li><a href="design-4.html">Design Studio IIII (Spring '24)</a></li>
+                <li><a href="physical-model-gallery.html">Physical Model Gallery</a></li>
+                <li><a href="naab-docs.html">NAAB Documentation</a></li>
+                <li><a href="bps-project.html">BPS Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title Section -->
+    <section class="title">
+        <p>Comprehensive Design Studio, Fall 2024</p> <!-- Title centered -->
+    </section>
+
+    <!-- Images Section -->
+    <section class="images-container-autoh">
+        <img src="images/sitecontext2.jpg" alt="neighborhoodcontext">
+        <img src="images/parti.jpg" alt="parti">
+        <img src="images/siteplan1.jpg" alt="siteplan">
+    </section>
+    <section class="images-container-autow">
+        <img src="images/FP1.jpg" alt="FP1">
+        <img src="images/sect1.jpg" alt="sect1">
+    </section>
+    <section class="images-container-autow">
+        <img src="images/FP2.jpg" alt="FP2">
+        <img src="images/sect2.jpg" alt="sect2">
+    </section>
+    <section class="images-leftaligned">
+        <img src="images/FP3.jpg" alt="FP3">
+        <div class="text-container">
+        <p> DESIGN NARRATIVE
+            LIGHT FROM THE LARGE INTERIOR COURT
+           YARD BRINGS YOU INSIDE THE MAIN LOBBY 
+           AND ORDERS YOU UP AND AROUND THE 
+           TREES WITHIN THE CENTER COURTYARD TO 
+           COLLECT A STORY AND NESTLE INTO THE 
+           ARCHES AND EXTERIOR WALLS. BOOKCAS
+           ES FOLLOWING THE ABOVE STRUCTURE TO 
+           FRAME BEAUTIFUL EXTERIOR VIEWS CON
+           CEPTUALLY DRIVEN BY THE DESIGN STIP
+           ULATION OF 40% OF THE THROUGH LOT BE 
+           ‘OPEN TO THE SKY’. THE INTERIOR CIRCU
+           LATION IS MAINLY DEFINED BY LOOPS AND 
+           CIRCULATION ZONES LEAVING THE EXTERIOR 
+           LADNSCAPE TO BE FREE OF SYMMETRY OR 
+           REPEATING PATHS ALLOWING THERE TO BE 
+           MORE DISCOVERY AND PRIVACY. THE KIDS 
+           ENTRANCE ON THE OTHER SIDE FOLLOWS 
+           THE SAME RULE SET AT HALF THE SCALE 
+           WITH A FACADE OF WINDOWS THAT HINT AT 
+           THE PROGRAM BEHIND  THEM. THE PROJECT 
+           UTILIZES OPEN CONCEPT PROGRAMS MESH
+           ING  WHATS NORMALLY DIVIDED INTO ROOMS 
+           IS FREE FLOWING ON THE FIRST FLOOR AL
+           LOWING YOU TO MOVE AROUND THE COURT
+           YARD EITHER THROUGH THE PERIODICAL 
+           AND CAFE OR THE MEDIA AND YOUNG ADULT 
+           AREA ALL SPACES PROMOTE CONNECTIVE
+           NESS WITHIN THE COMMUNITY.
+         </p>
+        </div>
+    </section>
+    <section class="images-container-longsection">
+        <img src="images/section2.jpg" alt="section2">
+    </section>
+    <section class="images-container-autow75">
+        <img src="images/elevation1.jpg" alt="elev2">
+        <img src="images/elevation2.jpg" alt="elev2">
+    </section>
+    <section class="images-container-autow">
+        <img src="images/struc.jpg" alt="structure">
+        <img src="images/program.jpg" alt="program">
+    </section>
+    <section class="images-leftaligned-compsect">
+        <img src="images/compsect.jpg" alt="comprehensive">
+    </section>
+    <section class="images-leftaligned-wallsect">
+        <img src="images/wallsect.jpg" alt="wall section">
+        <div class="text-container1"></div>
+        <p> LONGSPAN STRUCTURE CONCEPT
+            I DREW SOME CONCEPTUAL INSPIRATION FROM THE MAGGIE LEEDS CENTRE 
+           BY HETHERWICK IN SATISFYING THE LONGSPAN STRUCTURE 5,000SQFT READ
+           ING ROOM. A SERIES OF PROPORTIONALLY SIZED ARCHES CREATE A SQUARE 
+           ENCLOSING A PERFECT GLASS CYLYNDER THAT ACTS AS A LARGE INTERIOR 
+           COURTYARD MAKING UP A SIGNIFICANT AMOUNT OF THE REQUIRED ‘OPEN TO 
+           SKY’ SPACE. A CLT COMPRESSION RING SUSPENDS THE GLASS INSIDE WHILE 
+           THE ARCHES COMPRESS THE OUTSIDE OF THE RING. THE CLT ARCHES ARE 
+           PLACED 25’ ON CENTER CREATING A 100’X100’SQFT BOX. THE ONLY GLASS IS 
+           THE CENTER COURTYARD LEAVING THE EXTERIOR WALLS OPAQUE ALLOWING A 
+           NATURAL ORIENTATION TWOARD THE CENTER, ARCHES HELPING TO ENCLOSE 
+           THE USER WITHIN THE WORLD IVE CREATED. STACKS WITHIN THE LONGSPAN 
+           SPACE FOLLOW</p>
+    </section>
+    <section class="images-container-autow">
+        <img src="images/mainentry.jpg" alt="exterior rendering">
+        <img src="images/kidsentry.jpg" alt="exterior rendering">
+    </section>
+    <section class="images-container-autow">
+        <img src="images/modelinside.jpg" alt="model inside">
+        <img src="images/modelinsite1.jpg" alt="model in site">
+        <img src="images/modelinsite2.jpg" alt="model in site">
+    </section>
+    <section class="images-container-autow">
+        <img src="images/lobby.jpg" alt="interior rendering">
+        <img src="images/center.jpg" alt="interior rendering">
+    </section>
+    <section class="button-section" style="text-align: center; margin-top: 50px;">
+        <button onclick="window.location.href='fall2024portfolio.METZLER.MADELINE.pdf'" style="padding: 10px 20px; font-size: 16px;">View Portfolio</button>
+        <button onclick="window.location.href='2025Resume.Metzler.Madeline.pdf'" style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">View Resume</button>
+    </section>
+    <section class="button-section">
+        <div class="button">
+            <a href="comprehensive-design-BPS.html">
+                <img src="images/model.jpg" alt="Building Performance Simulation Data">
+                <span>Building Performance Simulation Data</span>
+            </a>
+        </div>
+        <div class="button">
+            <a href="comprehensive-design-processmodels.html">
+                <img src="images/processmodel.jpg" alt="Process Models">
+                <span>Process Models</span>
+            </a>
+        </div>
+        <div class="button">
+            <a href="comprehensive-design-processdrawings.html">
+                <img src="images/drawing.jpg" alt="Process Drawings/Sketches">
+                <span>Process Drawings/Sketches</span>
+            </a>
+        </div>
+    </section>
+    <!-- Add this anchor element -->
+    <a id="bottom"></a>
+    <!-- Footer -->
+    <footer class="solid-footer">
+        <p>&copy; 2025 Madeline Metzler. All rights reserved.</p>
+    </footer>
+</body>
+</html>
