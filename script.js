@@ -21,10 +21,3 @@ window.addEventListener('scroll', function() {
         aboutSection.classList.remove('scrolled');
     }
 });
-
-// HOPEFUL FIX FOR THE STUPID CHROME 180 DEGREE ROTATION
-if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-    const video = document.querySelector('.video-container video');
-    video.style.transform = 'rotate(180deg)';
-}
-
