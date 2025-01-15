@@ -82,6 +82,7 @@ body {
     z-index: -2;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
 .video-container video {
     object-fit: cover;
     width: 100%;
@@ -89,7 +90,7 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg) scale(1, 1); /* Ensure the video is right side up */
-
+    }
 }
 
 /* Overlay for Text */
