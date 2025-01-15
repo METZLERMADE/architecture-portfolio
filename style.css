@@ -86,7 +86,7 @@ body {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    transform: rotate(0deg); /* Ensure the video is right side up */
+    transform: rotate(0deg) scale(1, 1); /* Ensure the video is right side up */
 }
 
 /* Overlay for Text */
